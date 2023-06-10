@@ -1,0 +1,17 @@
+Feature: Búsqueda de restaurantes por ubicación
+Scenario: Usuario busca restaurantes cercanos
+Given que el usuario está en la página principal de FoodFinder
+When el usuario ingresa su ubicación actual en la barra de búsqueda
+Then se muestran los restaurantes cercanos a la ubicación del usuario
+
+Feature: Filtrar restaurantes por tipo de cocina
+Scenario: Usuario busca restaurantes de comida italiana
+Given que el usuario está en la página principal de FoodFinder
+When el usuario selecciona "Comida Italiana" en los filtros de búsqueda
+Then se muestran los restaurantes que ofrecen comida italiana en la lista de resultados
+
+Feature: Guardar restaurantes favoritos
+Scenario: Usuario guarda un restaurante como favorito
+Given que el usuario está en la página de detalles de un restaurante
+When el usuario hace clic en el botón de "Guardar como favorito"
+Then el restaurante se guarda en la lista de favoritos del usuario
